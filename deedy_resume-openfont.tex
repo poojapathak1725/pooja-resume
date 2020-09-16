@@ -1,0 +1,276 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr, enumitem}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Anshul}{Sanamvenkata}{ \urlstyle{same}\href{}{} \href{}{}\\
+\href{mailto:anshulsanam@gmail.com}{anshulsanam@gmail.com} | (571) 418-9363 
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{University of Illinois \\ at Urbana-Champaign}
+\descript{B.S Computer Engineering }
+\location{Exp. 2021 | Urbana, IL}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+Github: \href{https://github.com/anshulsanam}{\bf anshulsanam} \\
+LinkedIn:  \href{https://www.linkedin.com/in/anshulsanam/}{\bf anshulsanam} \\
+YouTube:  \href{https://www.youtube.com/user/anshulsanam}{\bf anshulsanam} \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+Embedded Systems \\
+Applied Parallel Programming \\
+Algorithms \\
+Operating Systems and Design\\
+Intro to Robotics \\
+Artificial Intelligence \\
+Data Structures \\
+Analog Signals \\
+Computer Architecture \\
+Probability with Engineering Application \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Skills
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+Embedded Electronics and Systems \\
+Computer Vision \\
+3D Design and Manufacturing \\
+PCB Design \\
+Kernel Programming \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Languages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Languages and \\ Frameworks}
+\location{Proficiency:}
+\begin{itemize}[nosep, wide=0pt, leftmargin=*, after=\strut]
+\item Python
+\item C
+\item C++
+\item x86
+\item ROS
+\end{itemize} 
+\location{Exposure:}
+\begin{itemize}[nosep, wide=0pt, leftmargin=*, after=\strut]
+\item Java
+\item JavaScript
+\item Numpy
+\item OpenCV
+\item TensorFlow
+\item Keras
+\item CUDA
+\end{itemize} \location{Familiar:}
+\begin{itemize}[nosep, wide=0pt, leftmargin=*, after=\strut]
+\item Swift
+\item React
+\item Node.js
+\item Flask
+\item Socket.io
+\end{itemize} 
+\sectionsep
+
+
+
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+\runsubsection{NVIDIA}
+\descript{ \hspace*{\fill} Software Engineering Intern }
+\location{May 2020 - Present \hspace*{\fill} Santa Clara, CA}
+\sectionsep
+
+\runsubsection{Cargill Digital Labs}
+\descript{ \hspace*{\fill} Software Engineering Intern }
+\location{May 2018 – Sep 2018 \hspace*{\fill} Champaign, IL}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Utilized computer vision to classify animal produce in terms of color, size, type, and length as well as keep track of count as they rapidly move through the harvest machine.
+\item Built front and backend for a webapp that shows farmers remaining feed in animal feed bins by using data collected by LIDAR sensors. It calculates historical trends, consumption rate, density, volume, and projected empty date.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Petronics}
+\descript{ \hspace*{\fill} Engineering Intern }
+\location{May 2018 – Sep 2018 \hspace*{\fill} Champaign, IL}
+\begin{tightemize}
+\item Wrote C++ code for autonomous pet assistant robot that uses Visual Inertial Odometry and SLAM along with complex path planning algorithms to navigate indoor environments.
+\item Used ROS to aid in development of control systems for the robot.
+\item 3D designed and built calibration bed for IMUs that is used in the manufacturing process.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{SatDev}
+\descript{ \hspace*{\fill} Antenna Deployment Team Lead}
+\location{Sep 2017 – May 2018 \hspace*{\fill} Champaign, IL}
+\begin{tightemize}
+\item Oversaw antenna deployment team for CubeSail, a new platform to test solar sails.
+\item Collaborated with  Command and Data Handling Team to write code for antenna deployment, and was instrumental in decreasing communication latency.
+\item Improved previous antenna deployment times by over 50\%, and improved power and current consumption by over 70\%.
+\end{tightemize}
+\sectionsep
+
+% \runsubsection{Protect Snow Leopards Project}
+% \descript{ \hspace*{\fill} Lead Software Intern}
+% \location{Apr 2017 – July 2018 \hspace*{\fill} Great Falls, VA}
+% \begin{tightemize}
+% \item Collaborated with conservationists in the Himalayan region that utilized camera traps as a method of tracking critically endangered Snow Leopards.
+% \item Developed a deep learning application to help classify Snow Leopards, from other animals  with an accuracy of 91\%.
+% \end{tightemize}
+% \sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+\runsubsection{Operating System}
+\descript{ \hspace*{\fill} Software Developer }
+\location{March 2019 – May 2019 \hspace*{\fill} Champaign, IL}
+
+\begin{tightemize}
+\item Created a Unix-like, preemptively multitasked operating system using virtual memory, including signals, starting from only a bootloader.
+\item Wrote a fully featured GUI and window manager for user level programs and made a graphics card driver to accelerate window dragging and resizing features.
+\end{tightemize}
+
+\sectionsep
+
+\runsubsection{Bluetooth Controlled \\ Modular Drone}
+\descript{ \hspace*{\fill} Robotics Engineer }
+\location{May 2016 – Sep 2016 \hspace*{\fill} Ashburn, VA}
+
+\begin{tightemize}
+\item Fully designed all aspects of a modular drone platform.
+\item Designed everything including the circuit board, 3D printed parts, software running on microcontroller, and smartphone app to control the drone.
+\item Referenced bluetooth stack for modem in C and assembly, and wrote an android app to interface with it in Java
+\end{tightemize}
+
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Awards} 
+% \begin{tabular}{rll}
+% 2014	     & top 52/2500  & KPCB Engineering Fellow\\
+% 2014	     & 1\textsuperscript{st}/50  & Microsoft Coding Competition, Cornell\\
+% 2013	     & National  & Jump Trading Challenge Finalist\\
+% 2013     & 7\textsuperscript{th}/120 & CS 3410 Cache Race Bot Tournament  \\
+% 2012     & 2\textsuperscript{nd}/150 & CS 3110 Biannual Intra-Class Bot Tournament \\
+% 2011     & National & Indian National Mathematics Olympiad (INMO) Finalist \\
+% \end{tabular}
+% \sectionsep
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %     PUBLICATIONS
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Publications} 
+% \renewcommand\refname{\vskip -1.5em} % Couldn't get this working from the .cls file
+% \bibliographystyle{abbrv}
+% \bibliography{publications}
+% \nocite{*}
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
